@@ -1,0 +1,40 @@
+spring: 
+  aop: 
+      proxy-target-class: true
+      auto: true
+  datasource:
+    druid:
+       ted: 
+         url: jdbc:mysql://localhost:3306/ted
+         username: root
+         password: 123456
+         type: com.alibaba.druid.pool.DruidDataSource
+         driver-class-name: com.mysql.jdbc.Driver
+         initialSize: 5
+         minIdle: 5
+         maxActive: 20
+         
+       bear: 
+         url: jdbc:mysql://localhost:3306/bear
+         username: root
+         password: 123456
+         type: com.alibaba.druid.pool.DruidDataSource
+         driver-class-name: com.mysql.jdbc.Driver
+         initialSize: 5
+         minIdle: 5
+         maxActive: 20
+
+server:
+   port: 9000
+   
+   # Swagger界面内容配置
+swagger:
+  title: Ted API接口文档
+  description: Ted Api Documentation
+  version: 1.0.0
+  termsOfServiceUrl: http://localhost
+  contact:
+    name: Ted
+    url: http://localhost
+    email: uncle_ted@163.com
+   
